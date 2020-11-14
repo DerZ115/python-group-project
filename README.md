@@ -43,7 +43,7 @@ General notes:
 
 <div class="text_cell_render border-box-sizing rendered_html">
 
-## Background information[¶](#Background-information)
+## Background information
 
 In any organism group (like Eukaryota, Fungi or Mammalia), a number of genes are shared among distantly related lineages, making it probable that they were inherited from the [last common ancestor](https://en.wikipedia.org/wiki/Most_recent_common_ancestor) of this group. Such genes in different organisms, that descend from a common ancestor gene, are called [orthologs](https://en.wikipedia.org/wiki/Sequence_homology#Orthology). However, many of these genes were lost in specific lineages, and only a few are universal to the whole taxonomic group (i.e., occur in all members of that group). These patterns of gene conservation and gene loss are used for functional and evolutionary studies.
 
