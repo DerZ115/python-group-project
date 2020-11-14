@@ -3,6 +3,7 @@
 """Parse eggNOG members files and select OGs based on occurence
 and uniqueness."""
 
+import math
 import sys
 import argparse
 import logging
