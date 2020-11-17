@@ -22,7 +22,7 @@ Final assignment, 09.11.2020 ("Grundlagen der Programmierung in Python", Bio Dat
 
 <div class="text_cell_render border-box-sizing rendered_html">
 
-# A study of conserved genes, using the eggNOG database[¶](#A-study-of-conserved-genes,-using-the-eggNOG-database)
+# A study of conserved genes, using the eggNOG database
 
 General notes:
 
@@ -43,7 +43,7 @@ General notes:
 
 <div class="text_cell_render border-box-sizing rendered_html">
 
-## Background information[¶](#Background-information)
+## Background information
 
 In any organism group (like Eukaryota, Fungi or Mammalia), a number of genes are shared among distantly related lineages, making it probable that they were inherited from the [last common ancestor](https://en.wikipedia.org/wiki/Most_recent_common_ancestor) of this group. Such genes in different organisms, that descend from a common ancestor gene, are called [orthologs](https://en.wikipedia.org/wiki/Sequence_homology#Orthology). However, many of these genes were lost in specific lineages, and only a few are universal to the whole taxonomic group (i.e., occur in all members of that group). These patterns of gene conservation and gene loss are used for functional and evolutionary studies.
 
@@ -79,7 +79,7 @@ The data of the eggNOG database can be accessed from the [eggNOG website](http:/
 
 <div class="text_cell_render border-box-sizing rendered_html">
 
-## Questions[¶](#Questions)
+## Questions
 
 We will use the information provided by eggNOG to explore highly conserved genes in the three domains of life, Bacteria, Archaea and Eukaryota. Your task is to answer the following questions:
 
@@ -122,7 +122,7 @@ We will use the information provided by eggNOG to explore highly conserved genes
 
 <div class="text_cell_render border-box-sizing rendered_html">
 
-## Required files and scripts[¶](#Required-files-and-scripts)
+## Required files and scripts
 
 Relevant data files can be downloaded from the [eggNOG download page](http://eggnog5.embl.de/download/). We will use the database release eggNOG 5.0.
 
@@ -144,7 +144,7 @@ Note that the eggNOG naming scheme is somewhat inconsistent for historical reaso
 
 <div class="text_cell_render border-box-sizing rendered_html">
 
-## Project requirements[¶](#Project-requirements)
+## Project requirements
 
 1.  Modify the provided scripts and solve the presented tasks.
 2.  Answer the questions (you can put the answers in a `README` file, together with any other relevant information), and provide the scripts to reproduce your results. To obtain the max. number of points, runnable Python/Bash scripts must be provided together with the answers/results.
@@ -170,7 +170,7 @@ Note that the eggNOG naming scheme is somewhat inconsistent for historical reaso
 
 <div class="text_cell_render border-box-sizing rendered_html">
 
-## Tips[¶](#Tips)
+## Tips
 
 *   Designing/understanding the program logic is often more difficult than writing the code. Use print/logging and the debugger.
 *   Use small files to test/develop the code. Compare the size of input data files, and use the smallest file for testing/developing. Another possibility is to subsample (take only a part of the data file).
