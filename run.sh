@@ -28,7 +28,11 @@ if [ -z "$(ls $DATADIR)" ]; then
     # http://eggnog5.embl.de/download/eggnog_5.0/
     pushd $DATADIR
     echo "Downloading required data files..."
-    # Your code here
+    wget http://eggnog5.embl.de/download/eggnog_5.0/per_tax_level/2/2_members.tsv.gz
+    wget http://eggnog5.embl.de/download/eggnog_5.0/per_tax_level/2157/2157_members.tsv.gz
+    wget http://eggnog5.embl.de/download/eggnog_5.0/per_tax_level/2759/2759_members.tsv.gz
+    wget http://eggnog5.embl.de/download/eggnog_5.0/per_tax_level/2157/2157_annotations.tsv.gz
+    wget http://eggnog5.embl.de/download/eggnog_4.5/eggnog4.functional_categories.txt
     popd
 fi
 
