@@ -65,8 +65,16 @@ def calc_stats(taxids, all_taxids):
     """
     # Basic argument checking
     assert len(set(all_taxids)) == len(all_taxids), "Taxids occur more than once?"
+
     # Your code here
-    return (False, False, False)
+    # Compares the number of different taxids to the total number of taxids --> occurance 
+    occ = len(set(taxids))*100/len(all_taxids)
+    # Compares the number of unique taxids to the number off different taxids --> uniqueness 
+    uniq = len(uniques(taxids))*100/len(set(taxids))
+    # Multiplies the percentage of unique taxids in "taxids" by the fraction of all taxids occuring in "taxids" --> occurance single copy 
+    occ_sc = occ*uniq/100
+
+    return (occ, uniq, occ_sc)
 
 
 def parse_members_file(fin):
@@ -109,12 +117,14 @@ def parse_members_file(fin):
 def missing_taxids(cog, taxids):
     """Determines which OGs are missing from which taxids."""
     logger.debug(f"Determining missing taxids for {cog}")
+
     # Your code here
     taxids = set(taxids)
     if len(taxids) < len(all_taxids):
         missing = all_taxids - taxids
         for taxid in missing:
             taxid2missing_cogs[taxid].append(cog)
+
 
 def output_seqids(filename, cogs):
     """Writes seqids to file."""
