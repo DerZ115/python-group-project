@@ -34,3 +34,4 @@ with gzip.open(func_file, "rt") as fin:
 
 
 # Step 4: Count and output the categories for OGs of interest
+#test
