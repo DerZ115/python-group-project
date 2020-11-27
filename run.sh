@@ -51,9 +51,9 @@ zcat $bacteria | ./read_members_file.py -min_occurence 50 -min_uniqueness 99 > c
 comm -12 cogs_bacteria_o99.txt cogs_bacteria_o50_u99.txt
 
 ### 3. Identify all OGs that occur as single-copy in at least 97% of all archaea
-zcat $archaea | ./read_members_file.py -min_occurence_as_singlecopy 97 > cogs_archaea_os99.txt
+zcat $archaea | ./read_members_file.py -min_occurence_as_singlecopy 97 > cogs_archaea_os97.txt
 # Are there archaea which lack 4 or more of those universal OGs?
 zcat $archaea | ./read_members_file.py -min_occurence_as_singlecopy 97 -missing 4
 
 ### 4. Compile an overview of the functional categories of these 121 archaeal OGs
-./annotate_cogs.py $func_categories $archaea_fct cogs_archaea_os99.txt
+./annotate_cogs.py $func_categories $archaea_fct cogs_archaea_os97.txt
