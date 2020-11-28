@@ -18,19 +18,36 @@ my_cogs = set()
 
 # Step 1: Read description of functional categories
 with open(func_categories_file) as fin:
-    pass
+    for line in fin:
+        line = line.strip()
+        if line.startswith("["):  # Skip headers and empty lines
+            cat = line[1]
+            desc = line[4:]
+            category2description[cat] = desc
 
 
 # Step 2: Read file with OGs of interest
 with open(cog_file) as fin:
-    pass
+    for line in fin:
+        if line.startswith("#"):  # Skip header line
+            continue
+        my_cogs.add(line.split()[0])
 
 
 # Step 3: Read file with functional annotations
 # and remember those for OGs of interest
 # gzip: "rt" required for text mode, see https://docs.python.org/3/library/gzip.html
 with gzip.open(func_file, "rt") as fin:
-    pass
+    for line in fin:
+        cog, cat = line.split()[1:3]
+        if cog in my_cogs:
+            cog2category[cog] = cat
 
 
 # Step 4: Count and output the categories for OGs of interest
+for cats in cog2category.values():
+    for cat in cats:  # In case a cog has multiple categories
+        category2count[cat] += 1
+
+for cat, count in category2count.most_common():
+    print(f"{count}\t{category2description[cat]}")

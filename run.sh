@@ -2,7 +2,7 @@
 ###### Use the eggNOG 5.0 database to identify conserved single-copy genes.
 set -eu -o pipefail  # options for safe Bash scripting
 
-### Variable secion
+### Variable section
 # base directory
 DATADIR=eggnog_data
 
@@ -56,4 +56,4 @@ zcat $archaea | ./read_members_file.py -min_occurence_as_singlecopy 97 > cogs_ar
 zcat $archaea | ./read_members_file.py -min_occurence_as_singlecopy 97 -missing 4
 
 ### 4. Compile an overview of the functional categories of these 121 archaeal OGs
-./annotate_cogs.py $func_categories $archaea_fct cogs_archaea_os97.txt
+./annotate_cogs.py $func_categories $archaea_fct cogs_archaea_os97.txt > archaea_os97_categories.txt
