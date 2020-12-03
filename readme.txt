@@ -61,5 +61,5 @@ Answers to questions
             https://pubmed.ncbi.nlm.nih.gov/24609529/
 
 4. Compile an overview of the functional categories of these 121 archaeal OGs.
-    archaea_os97_categories.txt     
+    cogs_archaea_os97_categories.txt     
 
