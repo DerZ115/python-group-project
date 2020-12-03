@@ -17,9 +17,11 @@ my_cogs = set()
 
 
 # Step 1: Read description of functional categories
+# Example:
+#  [J] Translation, ribosomal structure and biogenesis 
 with open(func_categories_file) as fin:
     for line in fin:
-        line = line.strip()
+        line = line.strip()  # Remove leading whitespace and trailing newlines
         if line.startswith("["):  # Skip headers and empty lines
             cat = line[1]
             desc = line[4:]
@@ -27,11 +29,13 @@ with open(func_categories_file) as fin:
 
 
 # Step 2: Read file with OGs of interest
+# Example
+# arCOG00029	99.4	98.2	97.6
 with open(cog_file) as fin:
     for line in fin:
         if line.startswith("#"):  # Skip header line
             continue
-        my_cogs.add(line.split()[0])
+        my_cogs.add(line.split()[0]) # Add first item (cog id) to set
 
 
 # Step 3: Read file with functional annotations

@@ -121,7 +121,7 @@ def missing_taxids(cog, taxids):
 
     # Your code here
     taxids = set(taxids)
-    if len(taxids) < len(all_taxids):
+    if len(taxids) < len(all_taxids):  # Only run if any cogs missing
         missing = all_taxids - taxids
         for taxid in missing:
             taxid2missing_cogs[taxid].append(cog)
@@ -187,7 +187,7 @@ def determine_cogs(args):
         # Your code here
         for taxid, cogs in taxid2missing_cogs.items():
             if len(cogs) >= args.missing:
-                print(taxid, file=sys.stderr)
+                print(taxid, "\t", len(cogs), file=sys.stderr)
 
 
 def main(args):
