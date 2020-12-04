@@ -66,3 +66,4 @@ Answers to questions
         cogs_archaea_os97_categories.txt     
 
 2) ASCII cat
+    SEE ASCIIcat.py
